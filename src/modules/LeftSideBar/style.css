@@ -1,0 +1,18 @@
+.sidebar-container {
+    min-height: 100vh;
+    margin-top: 65px !important;
+    border: none !important;
+    border-radius: 0px !important;
+}
+
+.color-white {
+    color: white !important;
+}
+
+.padding-25 {
+    padding: 25px !important;
+}
+
+.background-blue {
+    background: grey !important;
+}
