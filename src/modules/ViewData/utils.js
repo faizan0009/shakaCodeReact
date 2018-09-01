@@ -1,11 +1,12 @@
 import axios from 'axios';
+import config from '../../config';
 
 
 
 export const fetchUsers = () => new Promise((resolve, reject) => {
     axios({
         method: 'get',
-        url: 'http://localhost:3000/users/fetchusers',
+        url: `${config.serviceURL}/users/fetchusers`,
     }).then((users) => {
         resolve(users.data.users);
     }).catch((error) => {
@@ -16,7 +17,7 @@ export const fetchUsers = () => new Promise((resolve, reject) => {
 export const deleteUSER = (id) => new Promise((resolve, reject) => {
     axios({
         method: 'post',
-        url: 'http://localhost:3000/users/delete',
+        url: `${config.serviceURL}/users/delete`,
         data: {
             id: id
             },

@@ -48,6 +48,7 @@ class Signup extends Component {
       });
     }
     else{
+      console.log("in else")
     this.props.signup(this.state.email, this.state.password, this.state.userType);
     }
   }

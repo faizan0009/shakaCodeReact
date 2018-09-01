@@ -1,11 +1,12 @@
 import * as actionTypes from '../../constants/actionTypes';
 import axios from 'axios';
+import config from '../../../config';
 
 export const userLogin = (username, password) => (dispatch) => {
   dispatch({ type: actionTypes.AUTH_LOGIN_STARTED });
     axios({
         method: 'post',
-        url: 'http://localhost:3000/users/login',
+        url: `${config.serviceURL}/users/login`,
         data: {
         username: username,
         password: password,
@@ -33,7 +34,7 @@ export const signup = (email, password, userType) => (dispatch) => {
     dispatch({ type: actionTypes.AUTH_SIGNUP_STARTED });
       axios({
           method: 'post',
-          url: 'http://localhost:3000/users/signup',
+          url: `${config.serviceURL}/users/signup`,
           data: {
           username: email,
           password: password,
@@ -44,7 +45,7 @@ export const signup = (email, password, userType) => (dispatch) => {
               type: actionTypes.AUTH_SIGNUP_SUCCESS,
               user: user.userInfo,
             });
-           window.location.replace('/sign-in');
+           window.location.replace('/home');
       })
           .catch((error) => {
           console.error(error);
