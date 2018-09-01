@@ -16,7 +16,6 @@ const mapStateToProps = (state) => {
       currentUser,
     };
   };
-
   
 const setCurrentUser = () => (dispatch) => {
   let user = JSON.parse(localStorage.getItem("user"))
