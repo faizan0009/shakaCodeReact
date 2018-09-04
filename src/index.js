@@ -7,7 +7,6 @@ import 'semantic-ui-css/semantic.min.css';
 import './index.css';
 
 
-
 const target = document.querySelector('#root');
 
 
